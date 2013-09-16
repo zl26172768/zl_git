@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <!-- 连接Mysql数据库,location为物理地址,注意修改 -->
+    <classPathEntry location="D:\Application\repository\mysql\mysql-connector-java\5.1.22\mysql-connector-java-5.1.22.jar" />
+    <context id="DB2Tables" targetRuntime="MyBatis3" >
+        <commentGenerator>
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+
+        <!-- 注意修改数据库名称、数据库账号和密码 -->
+        <jdbcConnection connectionURL="jdbc:mysql://localhost/test" driverClass="com.mysql.jdbc.Driver" password="root" userId="root" >
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!-- 生成实体Bean：XXX.java -->
+        <javaModelGenerator targetPackage="com.db.entity" targetProject="D:\IDEA\SpringTransactional\src\main\java" >
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!-- 生成Mapper接口文件：XXXMapper.java(映射器) -->
+        <sqlMapGenerator targetPackage="com.db.mapper" targetProject="D:\IDEA\SpringTransactional\src\main\java" >
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!-- 生成XML配置文件：XXXMapper.xml -->
+
+        <javaClientGenerator targetPackage="com.db.mapper" targetProject="D:\IDEA\SpringTransactional\src\main\java" type="XMLMAPPER" >
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- 配置数据库表名和生成后的JavaBean名称和数据库中对应的表名 -->
+        <table
+            domainObjectName="AppAddress"
+            enableCountByExample="false"
+            enableDeleteByExample="false"
+            enableSelectByExample="false"
+            enableUpdateByExample="false"
+            selectByExampleQueryId="false"
+            tableName="appaddress" >
+        </table>
+    </context>
+
+</generatorConfiguration>
