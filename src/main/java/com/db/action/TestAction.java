@@ -35,6 +35,7 @@ public class TestAction {
         System.out.println("test");
         System.out.println("test2");
         System.out.println("test3master_git");
+        System.out.println("test3");
 
         return appUser;
     }
