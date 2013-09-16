@@ -34,7 +34,7 @@ public class TestAction {
         AppUser appUser=testBusniess.insert(id1,address,id2,name);
         System.out.println("test");
         System.out.println("test2");
-
+        System.out.println("test3master_git");
 
         return appUser;
     }
