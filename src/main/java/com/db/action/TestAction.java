@@ -33,6 +33,7 @@ public class TestAction {
         String address=request.getParameter("address");
         AppUser appUser=testBusniess.insert(id1,address,id2,name);
         System.out.println("test");
+        System.out.println("test2");
 
 
         return appUser;
