@@ -38,6 +38,7 @@ public class TestAction {
         System.out.println("test3");
         System.out.println("私人beat1.0添加");
         System.out.println("zl26172768");
+        System.out.println("aaaaaaaaa");
         return appUser;
     }
 
